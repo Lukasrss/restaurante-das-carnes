@@ -552,3 +552,40 @@ section{
         background-attachment: fixed;
     }
 }
+
+/* Why us */
+.why-us{
+    .box{
+        padding: 50px 30px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        transition: all ease-in-out 0.3s;
+        background: #1a1814;
+        span{
+            display: block;
+            font-size: 28px;
+            font-weight: 700;
+            color: #cda45e;
+        }
+        h4{
+            font-size: 24px;
+            font-weight: 600;
+            padding: 0;
+            margin: 20px 0;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        p{
+            color: #aaa;
+            font-size: 15px;
+            margin: 0;
+            padding: 0;
+        }
+        &:hover{
+            background: #cda45e;
+            padding: 30px 30px 70px 30px;
+            box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+            span,h4,p{
+                color: #ececec;
+            }
+        }
+    }
+}
