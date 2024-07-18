@@ -720,3 +720,68 @@ section{
         }
     }
 }
+
+/* Eventos */
+.events {
+    background: url("../img/events-bg.jpg") center center no-repeat;
+    background-size: cover;
+    position: relative;
+    .container {
+        position: relative;
+    }
+    .section-title h2{
+        color: #ececec;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        background: rgba(0, 0, 0, 0.8);
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+}
+@media(min-width: 1024px){
+    .events{
+        background-attachment: fixed;
+        .events-carousel{
+            background: rgba(255, 255, 255, 0.08);
+            padding: 30px;
+        }
+        .event-item {
+            color: #aaa;
+            h3 {
+                color: #cda45e;
+                font-weight: 600;
+                font-size: 26px;
+            }
+            .price {
+                font-size: 26px;
+                font-family: "Open Sans", sans-serif;
+                font-weight: 700;
+                margin-bottom: 15px;
+                span {
+                    border-bottom: 2px solid #cda45e;
+                }
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                li {
+                    padding-bottom: 10px;
+                    color: #ececec;
+                }
+                i {
+                    font-size: 20px;
+                    color: #cda45e;
+                    padding-right: 4px;
+                }
+            }
+            p:last-child {
+                color: #fff;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
