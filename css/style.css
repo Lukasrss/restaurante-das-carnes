@@ -741,59 +741,62 @@ section{
         left: 0;
         bottom: 0;
     }
+    .events-carousel{
+        background: rgba(255, 255, 255, 0.08);
+        padding: 30px;
+    }
+    .event-item {
+        color: #fff;
+        h3 {
+            color: #cda45e;
+            font-weight: 600;
+            font-size: 26px;
+        }
+        .price {
+            font-size: 26px;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 700;
+            margin-bottom: 15px;
+            span {
+                border-bottom: 2px solid #cda45e;
+            }
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            li {
+                padding-bottom: 10px;
+                color: #ececec;
+            }
+            i {
+                font-size: 20px;
+                color: #cda45e;
+                padding-right: 4px;
+            }
+        }
+        p:last-child {
+            color: #fff;
+            margin-bottom: 0;
+        }
+    }
+    .swiper-pagination {
+        margin-top: 30px;
+        position: relative;
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .swiper-pagination-bullet-active {
+            background: #cda45e;
+        }
+    }
 }
 @media(min-width: 1024px){
     .events{
         background-attachment: fixed;
-        .events-carousel{
-            background: rgba(255, 255, 255, 0.08);
-            padding: 30px;
-        }
-        .event-item {
-            color: #aaa;
-            h3 {
-                color: #cda45e;
-                font-weight: 600;
-                font-size: 26px;
-            }
-            .price {
-                font-size: 26px;
-                font-family: "Open Sans", sans-serif;
-                font-weight: 700;
-                margin-bottom: 15px;
-                span {
-                    border-bottom: 2px solid #cda45e;
-                }
-            }
-            ul {
-                list-style: none;
-                padding: 0;
-                li {
-                    padding-bottom: 10px;
-                    color: #ececec;
-                }
-                i {
-                    font-size: 20px;
-                    color: #cda45e;
-                    padding-right: 4px;
-                }
-            }
-            p:last-child {
-                color: #fff;
-                margin-bottom: 0;
-            }
-        }
-        .swiper-pagination {
-            margin-top: 30px;
-            position: relative;
-            .swiper-pagination-bullet {
-                width: 12px;
-                height: 12px;
-                background: rgba(255, 255, 255, 0.4);
-            }
-            .swiper-pagination-bullet-active {
-                background: #cda45e;
-            }
-        }
     }
 }
+
+
+/* Reservas */
