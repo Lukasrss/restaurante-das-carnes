@@ -913,9 +913,247 @@ section{
             color: rgba(255, 255, 255, 0.6);
             margin: 0 0 0 45px;
         }
-        .quote-icon-left,.quote-icon-left {
+        .quote-icon-left,.quote-icon-right {
             color: #cda45e;
             font-size: 26px;
+            display: inline-block;
+            position: relative;
+        }
+        .quote-icon-left {
+            left: -5px;
+        }
+        .quote-icon-right {
+            right: -5px;
+            top: 10px;
+        }
+        p {
+            font-style: italic;
+            margin: 0 15px 0 15px;
+            padding: 20px 20px 60px 20px;
+            background: #26231d;
+            position: relative;
+            border-radius: 6px;
+            z-index: 1;
+        }
+    }
+    .swiper-pagination {
+        margin-top: 30px;
+        position: relative;
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.4);
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active {
+            background: #cda45e;
         }
     }
 }
+/* Chefes */
+.chefs .member {
+    text-align: center;
+    margin-bottom: 20px;
+    background: #343a40;
+    position: relative;
+    overflow: hidden;
+    .member-info {
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition: 0.2s;
+    }
+    .member-info-content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10px;
+        transition: bottom 0.4s;
+        h4 {
+            font-weight: 700;
+            margin-bottom: 2px;
+            font-size: 18px;
+            color: white;
+        }
+        span {
+            font-style: italic;
+            display: block;
+            font-size: 13px;
+            color: white;
+        }
+    }
+    .social {
+        position: absolute;
+        left: 0;
+        bottom: -38px;
+        right: 0;
+        height: 48px;
+        transition: bottom ease-in-out 0.4s;
+        text-align: center;
+        a {
+            transition: color 0.3s;
+            color: white;
+            margin: 0 10px;
+            display: inline-block;
+            &:hover {
+                color: #cda45e;
+            }
+        }
+        i {
+            font-size: 18px;
+            margin: 0 2px;
+        }
+    }
+    &:hover {
+        .member-info{
+            background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 20%, rgba(0, 212, 255, 0) 100%);
+            opacity: 1;
+            transition: 0.4s;
+        }
+        .member-info-content {
+            bottom: 60px;
+            transition: bottom 0.4s;
+        }
+        .social {
+            bottom: 0;
+            transition: bottom ease-in-out 0.4s;
+        }
+    }
+}
+
+/* Galeria */
+.gallery .gallery-item {
+    overflow: hidden;
+    border-right: 3px solid #454035;
+    border-bottom: 3px solid #454035;
+    img {
+        transition: all ease-in-out 0.4s;
+    }
+    &:hover img{
+        transform: scale(1.1);
+    }
+}
+
+/* Contato */
+.contact {
+    .info{
+        width: 100%;
+        i{
+            font-size: 20px;
+            float: left;
+            width: 44px;
+            height: 44px;
+            background: #cda45e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+        }
+        h4{
+            padding: 0 0 0 60px;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            font-family: "Poppins",sans-serif;
+        }
+        p{
+            padding: 0 0 0 60px;
+            margin-bottom: 0;
+            font-size: 14px;
+            color: #bab3a6;
+        }
+        .open-hours,.email,.phone{
+            margin: 40px;
+        }
+    }
+    .php-email-form {
+        width: 100%;
+        .validate {
+            display: none;
+            color: red;
+            margin: 0 0 15px 0;
+            font-weight: 400;
+            font-size: 13px;
+        }
+        .error-message{
+            display: none;
+            color: white;
+            background: #ed3c0d;
+            text-align: center;
+            padding: 15px;
+            font-weight: 600;
+        }
+        .sent-message{
+            display: none;
+            color: white;
+            background: #18d26e;
+            text-align: center;
+            padding: 15px;
+            font-weight: 600;
+        }
+        .loading{
+            display: none;
+            text-align: center;
+            padding: 15px;
+            &::before{
+                content: "";
+                display: inline-block;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                margin: 0 10px -6px 0;
+                border: 3px solid #cda45e;
+                border-top-color: #1a1814;
+                animation: animate-loading 1s linear infinite;
+            }
+        }
+        input,textarea {
+            border-radius: 0;
+            box-shadow: none;
+            font-size: 14px;
+            background: #0c0b09;
+            border-color: #625b4b;
+            color: white;
+            &::-moz-placeholder{
+                color: #a49b89;
+            }
+            &::placeholder{
+                color: #a49b89;
+            }
+            &:focus{
+                color: #cda45e;
+            }
+        }
+        input{
+            height: 44px;
+        }
+        textarea{
+            padding: 10px 12px;
+        }
+        button[type=submit]{
+            background: #cda45e;
+            border: 0;
+            padding: 10px 35px;
+            color: white;
+            transition: 0.4s;
+            border-radius: 50px;
+            &:hover{
+                background: #d3af71;
+            }
+        }
+    }
+}
+@keyframes animate-loading{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Rodape */
